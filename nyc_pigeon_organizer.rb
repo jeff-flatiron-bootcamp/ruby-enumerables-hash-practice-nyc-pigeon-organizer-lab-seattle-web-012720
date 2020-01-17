@@ -2,7 +2,7 @@ def nyc_pigeon_organizer(data)
   # write your code here!
  
   pigeons = {}
-  data.reduce({}) do |memo, (key, value)|
+  names = data.reduce({}) do |memo, (key, value)|
     value.reduce({}) do |memo2, (key2,value2)|
       value2.each{|n| 
         if(pigeons[n])
@@ -16,5 +16,6 @@ def nyc_pigeon_organizer(data)
       }
     end
   end
+  puts names
   pigeons
 end
